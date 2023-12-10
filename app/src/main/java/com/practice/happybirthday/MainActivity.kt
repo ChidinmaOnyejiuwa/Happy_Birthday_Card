@@ -37,7 +37,8 @@ class MainActivity : ComponentActivity() {
                 ) {
                     //I did not use the stringResource, I was getting errors while
                     //trying to put it so i left it
-                    GreetingImage(message = "Happy Birthday Omachi!", from = "From Mum")
+                    GreetingImage(message = "Happy Birthday Bestie!",
+                        from = "From Nma")
             }
         }
     }
@@ -76,7 +77,8 @@ fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier){
             contentScale = ContentScale.FillWidth,
             alpha = 0.5F
         )
-        GreetingText(message = message,
+        GreetingText(
+            message = message,
             from = from,
             modifier = Modifier.fillMaxSize().padding(8.dp)
         )
@@ -88,7 +90,8 @@ fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier){
 @Composable
 fun BirthdayCardPreview() {
     HappyBirthdayTheme {
-        GreetingText("Happy Birthday Omachi!", from ="From Mum")
+        GreetingText("Happy Birthday Bestie!",
+            from ="From Nma")
     }
 }
 }
