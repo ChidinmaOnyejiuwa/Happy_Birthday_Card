@@ -35,7 +35,8 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    //
+                    //I did not use the stringResource, I was getting errors while
+                    //trying to put it so i left it
                     GreetingImage(message = "Happy Birthday Omachi!", from = "From Mum")
             }
         }
@@ -64,7 +65,10 @@ fun GreetingText(message: String, from: String, modifier: Modifier = Modifier) {
 
 @Composable
 fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier){
- val image = painterResource(id = R.drawable.androidparty)
+ //I tried using another image other than the one provide by the step and it was not
+    // covering the surface of my devices even when i changed the contentscale it still
+    // did not work.
+    val image = painterResource(id = R.drawable.androidparty)
     Box {
         Image(
             painter = image,
@@ -74,7 +78,8 @@ fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier){
         )
         GreetingText(message = message,
             from = from,
-            modifier = Modifier.fillMaxSize().padding(8.dp))
+            modifier = Modifier.fillMaxSize().padding(8.dp)
+        )
     }
 
 }
