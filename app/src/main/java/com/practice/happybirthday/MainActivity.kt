@@ -77,8 +77,7 @@ fun GreetingImage(message: String, from: String, modifier: Modifier = Modifier){
             contentScale = ContentScale.FillWidth,
             alpha = 0.5F
         )
-        GreetingText(
-            message = message,
+        GreetingText(message = message,
             from = from,
             modifier = Modifier.fillMaxSize().padding(8.dp)
         )
